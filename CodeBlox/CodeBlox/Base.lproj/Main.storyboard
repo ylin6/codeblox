@@ -17,22 +17,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="CodeBlox" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9p-pp-pKS">
-                                <rect key="frame" x="247" y="149" width="74" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CodeBlox" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9p-pp-pKS">
+                                <rect key="frame" x="263.5" y="149" width="73.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rRU-E5-gGn">
-                                <rect key="frame" x="240" y="357" width="89" height="30"/>
-                                <state key="normal" title="Single Player"/>
-                                <connections>
-                                    <segue destination="3UR-nb-N3B" kind="show" id="u1F-bf-hS1"/>
-                                </connections>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FtL-m1-aJi">
+                                <rect key="frame" x="165" y="384" width="270" height="75"/>
+                                <color key="backgroundColor" red="1" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Multiplayer">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FtL-m1-aJi">
-                                <rect key="frame" x="246" y="429" width="76" height="30"/>
-                                <state key="normal" title="Multiplayer"/>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rRU-E5-gGn">
+                                <rect key="frame" x="165" y="267" width="270" height="75"/>
+                                <color key="backgroundColor" red="0.20000000000000001" green="1" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="QL1-KU-BN8"/>
+                                    <constraint firstAttribute="width" constant="270" id="kHd-Yf-LIg"/>
+                                </constraints>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Single Player">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="singlePlayer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kZg-fS-Aff"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -40,12 +51,19 @@
                             <constraint firstItem="FtL-m1-aJi" firstAttribute="top" secondItem="rRU-E5-gGn" secondAttribute="bottom" constant="42" id="5aW-jQ-v5w"/>
                             <constraint firstItem="FtL-m1-aJi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CnY-Rc-CBP"/>
                             <constraint firstItem="E9p-pp-pKS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UVV-hq-ZM5"/>
+                            <constraint firstItem="FtL-m1-aJi" firstAttribute="height" secondItem="rRU-E5-gGn" secondAttribute="height" id="aLK-Bu-iBg"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="FtL-m1-aJi" secondAttribute="bottom" constant="141" id="cOe-Rw-B3M"/>
+                            <constraint firstItem="FtL-m1-aJi" firstAttribute="width" secondItem="rRU-E5-gGn" secondAttribute="width" id="cdf-4y-RFp"/>
                             <constraint firstItem="rRU-E5-gGn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xU2-04-hJk"/>
                             <constraint firstItem="E9p-pp-pKS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="85" id="ztk-0h-0X6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="heq-jq-Aio"/>
+                    <connections>
+                        <outlet property="multiplayerButton" destination="FtL-m1-aJi" id="hFp-hS-GJe"/>
+                        <outlet property="singlePlayerButton" destination="rRU-E5-gGn" id="ckQ-nn-tbL"/>
+                        <segue destination="3UR-nb-N3B" kind="show" identifier="showDifficultySegue" id="vEU-6c-H0N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -64,36 +82,49 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WTk-Py-ijv">
-                                <rect key="frame" x="273" y="285" width="55" height="30"/>
-                                <state key="normal" title="Medium"/>
+                                <rect key="frame" x="165.5" y="330" width="270" height="75"/>
+                                <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Medium">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="mediumPuzzles:" destination="3UR-nb-N3B" eventType="touchUpInside" id="1xP-ox-31a"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tdc-gV-I1k">
-                                <rect key="frame" x="283" y="414" width="34" height="30"/>
-                                <state key="normal" title="Hard"/>
-                                <connections>
-                                    <action selector="hardPuzzles:" destination="3UR-nb-N3B" eventType="touchUpInside" id="NFx-T3-3kv"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uvX-Om-RhU">
-                                <rect key="frame" x="284" y="170" width="33" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uvX-Om-RhU">
+                                <rect key="frame" x="165" y="192" width="270" height="75"/>
+                                <color key="backgroundColor" red="0.20000000000000001" green="1" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="270" id="MHa-Yd-CgQ"/>
+                                    <constraint firstAttribute="height" constant="75" id="lpq-ge-9un"/>
+                                </constraints>
                                 <state key="normal" title="Easy"/>
                                 <connections>
                                     <action selector="easyPuzzles:" destination="3UR-nb-N3B" eventType="touchUpInside" id="Stb-R9-A2C"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tdc-gV-I1k">
+                                <rect key="frame" x="165" y="505" width="270" height="75"/>
+                                <color key="backgroundColor" red="1" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Hard"/>
+                                <connections>
+                                    <action selector="hardPuzzles:" destination="3UR-nb-N3B" eventType="touchUpInside" id="NFx-T3-3kv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="WTk-Py-ijv" firstAttribute="width" secondItem="uvX-Om-RhU" secondAttribute="width" id="1ym-rc-Bsr"/>
                             <constraint firstItem="Tdc-gV-I1k" firstAttribute="top" secondItem="WTk-Py-ijv" secondAttribute="bottom" constant="99" id="8xy-k7-AT4"/>
                             <constraint firstItem="uvX-Om-RhU" firstAttribute="top" secondItem="0c6-6y-KH1" secondAttribute="bottom" constant="128" id="Ccm-ES-kC8"/>
                             <constraint firstItem="uvX-Om-RhU" firstAttribute="centerX" secondItem="xnp-Gd-vJF" secondAttribute="centerX" id="LSj-Sq-XKR"/>
+                            <constraint firstItem="WTk-Py-ijv" firstAttribute="height" secondItem="uvX-Om-RhU" secondAttribute="height" id="LYn-as-R4e"/>
+                            <constraint firstItem="Tdc-gV-I1k" firstAttribute="width" secondItem="WTk-Py-ijv" secondAttribute="width" id="XIt-aS-OGs"/>
                             <constraint firstItem="WTk-Py-ijv" firstAttribute="centerY" secondItem="xnp-Gd-vJF" secondAttribute="centerY" id="XKg-eg-Fdn"/>
                             <constraint firstItem="WTk-Py-ijv" firstAttribute="top" secondItem="uvX-Om-RhU" secondAttribute="bottom" constant="63" id="d0y-h6-Gzh"/>
                             <constraint firstItem="Tdc-gV-I1k" firstAttribute="centerX" secondItem="xnp-Gd-vJF" secondAttribute="centerX" id="fpp-Tx-Zlm"/>
                             <constraint firstItem="WTk-Py-ijv" firstAttribute="centerX" secondItem="xnp-Gd-vJF" secondAttribute="centerX" id="s6v-bh-iix"/>
+                            <constraint firstItem="Tdc-gV-I1k" firstAttribute="height" secondItem="WTk-Py-ijv" secondAttribute="height" id="zUZ-d1-Y0i"/>
                         </constraints>
                     </view>
                     <connections>
@@ -127,7 +158,7 @@
                                             <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>

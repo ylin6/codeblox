@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DifficultyViewController: ViewController {
+class DifficultyViewController: UIViewController {
 
     @IBOutlet weak var easyButton: UIButton!
     @IBOutlet weak var mediumButton: NSLayoutConstraint!
