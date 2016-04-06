@@ -1,0 +1,6 @@
+framework module Pods_CodeBlox {
+  umbrella header "Pods-CodeBlox-umbrella.h"
+
+  export *
+  module * { export * }
+}

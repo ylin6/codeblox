@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CodeBlox/FirebaseServiceObject.swift"
+            timestampString = "481594269.132672"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "9"
+            endingLineNumber = "9">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CodeBlox.FirebaseServiceObject.__deallocating_deinit"
+                  moduleName = "CodeBlox"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Yucheng/Dev/iOS/codeBlox/CodeBlox/CodeBlox/FirebaseServiceObject.swift"
+                  timestampString = "481660786.828478"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CodeBlox.FirebaseServiceObject.init (CodeBlox.FirebaseServiceObject.Type)() -&gt; CodeBlox.FirebaseServiceObject"
+                  moduleName = "CodeBlox"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Yucheng/Dev/iOS/codeBlox/CodeBlox/CodeBlox/FirebaseServiceObject.swift"
+                  timestampString = "481660786.828976"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "31">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CodeBlox/FirebaseServiceObject.swift"
+            timestampString = "481594269.841152"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "10"
+            endingLineNumber = "10">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CodeBlox/FirebaseServiceObject.swift"
+            timestampString = "481656929.348091"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "getPuzzle(_:callback:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CodeBlox.FirebaseServiceObject.getPuzzle (CodeBlox.FirebaseServiceObject)(Swift.Dictionary&lt;Swift.String, Swift.String&gt;, callback : (CodeBlox.Puzzle) -&gt; ()) -&gt; ()"
+                  moduleName = "CodeBlox"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Yucheng/Dev/iOS/codeBlox/CodeBlox/CodeBlox/FirebaseServiceObject.swift"
+                  timestampString = "481660786.830622"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "2449">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CodeBlox.FirebaseServiceObject.(getPuzzle (CodeBlox.FirebaseServiceObject) -&gt; (Swift.Dictionary&lt;Swift.String, Swift.String&gt;, callback : (CodeBlox.Puzzle) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "CodeBlox"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Yucheng/Dev/iOS/codeBlox/CodeBlox/CodeBlox/FirebaseServiceObject.swift"
+                  timestampString = "481660786.830803"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "2656">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CodeBlox/PuzzleTableViewController.swift"
+            timestampString = "481653913.849173"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CodeBlox/Puzzle.swift"
+            timestampString = "481660786.689076"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "scramble()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
