@@ -15,11 +15,10 @@ class Puzzle: NSObject {
     
     init(pieces:[PuzzlePiece]){
         self.pieces = pieces;
-        self.scramble();
     }
     
     func scramble(){
-        //pieces = GKRandomSource.sharedRandom().arrayByShufflingObjectsInArray(pieces) as! [PuzzlePiece];
+        pieces = GKRandomSource.sharedRandom().arrayByShufflingObjectsInArray(pieces) as! [PuzzlePiece];
     }
     
 }

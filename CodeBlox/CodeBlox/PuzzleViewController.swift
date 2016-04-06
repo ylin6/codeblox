@@ -20,7 +20,7 @@ class PuzzleViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let fb = FirebaseServiceObject();
         fb.getPuzzle(input!){ (puzzle)->Void in
             self.puzzle = puzzle;
-            print(puzzle);
+            self.puzzle.scramble();
             self.puzzlePiecesTable.reloadData();
         }
     }
