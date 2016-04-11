@@ -11,13 +11,18 @@ import UIKit
 class DifficultyViewController: UIViewController {
 
     @IBOutlet weak var easyButton: UIButton!
-    @IBOutlet weak var mediumButton: NSLayoutConstraint!
+    @IBOutlet weak var mediumButton: UIButton!
     @IBOutlet weak var hardButton: UIButton!
     var difficulty:String?;
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        easyButton.layer.cornerRadius = easyButton.bounds.height/2;
+        mediumButton.layer.cornerRadius = mediumButton.bounds.height/2;
+        hardButton.layer.cornerRadius = hardButton.bounds.height/2;
+        
+        //easyButton.center.y = super.view.center.y/2;
+        //hardButton.center.y = super.view.center.y * 3/4;
         // Do any additional setup after loading the view.
     }
 
