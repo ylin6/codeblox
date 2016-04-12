@@ -11,7 +11,7 @@ import UIKit
 class PuzzleViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var input:[String:String]?;
     var puzzle:Puzzle = Puzzle(pieces: [PuzzlePiece(correctIndex: 0, codeLine: "")]);
-    
+    @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var puzzlePiecesTable: UITableView!
     
     
@@ -23,6 +23,8 @@ class PuzzleViewController: UIViewController, UITableViewDelegate, UITableViewDa
             self.puzzle.scramble();
             self.puzzlePiecesTable.reloadData();
         }
+        submitButton.layer.cornerRadius = submitButton.bounds.height/2;
+        puzzlePiecesTable.editing = true;
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,6 +49,29 @@ class PuzzleViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let cell = puzzlePiecesTable.dequeueReusableCellWithIdentifier("puzzlePieceCell", forIndexPath: indexPath) as UITableViewCell!
         cell.textLabel?.text = puzzle.pieces[indexPath.row].codeLine;
         return cell
+    }
+    
+    func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(tableView: UITableView, shouldIndentWhileEditingRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return false;
+    }
+    
+    func tableView(tableView: UITableView, editingStyleForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCellEditingStyle {
+        return .None;
+    }
+    
+    func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
+        let movedPiece = puzzle.pieces[fromIndexPath.row]
+        puzzle.pieces.removeAtIndex(fromIndexPath.row)
+        puzzle.pieces.insert(movedPiece, atIndex: toIndexPath.row)
+    }
+    
+    
+    @IBAction func checkCorrect(sender: AnyObject) {
+        print(puzzle.checkSolved());
     }
     
 

@@ -22,7 +22,7 @@ class FirebaseServiceObject: NSObject {
             
             rootRef.observeSingleEventOfType(.Value, withBlock:{ snapshot in
                 for line in snapshot.children.allObjects as! [FDataSnapshot]{
-                    pieces.append(PuzzlePiece(correctIndex: Int(line.key)!, codeLine: line.value as! String));
+                    pieces.append(PuzzlePiece(correctIndex: Int(line.key)!-1, codeLine: line.value as! String));
                     print("\(line.key): \(line.value)");
                 }
                 

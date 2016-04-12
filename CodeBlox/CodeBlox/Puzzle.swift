@@ -21,4 +21,15 @@ class Puzzle: NSObject {
         pieces = GKRandomSource.sharedRandom().arrayByShufflingObjectsInArray(pieces) as! [PuzzlePiece];
     }
     
+    func checkSolved()->Bool{
+        for(var i = 0; i < pieces.count; i++){
+            print("i: \(i) : \(pieces[i].correctIndex)");
+            if(i != pieces[i].correctIndex){
+                return false;
+            }
+        }
+        
+        return true;
+    }
+    
 }

@@ -19,6 +19,7 @@
 		CA54D9821CB487AC008C2B4B /* CodeBlox.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CA54D9801CB487AC008C2B4B /* CodeBlox.xcdatamodeld */; };
 		CA54D9841CB487AC008C2B4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA54D9831CB487AC008C2B4B /* Assets.xcassets */; };
 		CA54D9871CB487AC008C2B4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA54D9851CB487AC008C2B4B /* LaunchScreen.storyboard */; };
+		CA578CD31CBC42C6000ADB36 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA578CD21CBC42C6000ADB36 /* Game.swift */; };
 		CAC0D26A1CB48B8A00AE9D9C /* FirebaseServiceObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC0D2691CB48B8A00AE9D9C /* FirebaseServiceObject.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		CA54D9831CB487AC008C2B4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA54D9861CB487AC008C2B4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA54D9881CB487AC008C2B4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA578CD21CBC42C6000ADB36 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		CAC0D2691CB48B8A00AE9D9C /* FirebaseServiceObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseServiceObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,18 +105,43 @@
 		CA54D9781CB487AC008C2B4B /* CodeBlox */ = {
 			isa = PBXGroup;
 			children = (
-				CA545CE01CB54EFC00558615 /* ViewControllers */,
 				CA54D9791CB487AC008C2B4B /* AppDelegate.swift */,
-				CAC0D2691CB48B8A00AE9D9C /* FirebaseServiceObject.swift */,
-				CA545CD81CB48D1C00558615 /* PuzzlePiece.swift */,
-				CA545CDC1CB48FDF00558615 /* Puzzle.swift */,
+				CA545CE01CB54EFC00558615 /* ViewControllers */,
+				CA578CCF1CBC4266000ADB36 /* Objects */,
 				CA54D9831CB487AC008C2B4B /* Assets.xcassets */,
-				CA54D9851CB487AC008C2B4B /* LaunchScreen.storyboard */,
-				CA545CE71CB5803200558615 /* Main.storyboard */,
-				CA54D9881CB487AC008C2B4B /* Info.plist */,
-				CA54D9801CB487AC008C2B4B /* CodeBlox.xcdatamodeld */,
+				CA578CD41CBC7711000ADB36 /* Storyboards */,
+				CA578CD51CBC7727000ADB36 /* etc */,
 			);
 			path = CodeBlox;
+			sourceTree = "<group>";
+		};
+		CA578CCF1CBC4266000ADB36 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				CAC0D2691CB48B8A00AE9D9C /* FirebaseServiceObject.swift */,
+				CA545CDC1CB48FDF00558615 /* Puzzle.swift */,
+				CA545CD81CB48D1C00558615 /* PuzzlePiece.swift */,
+				CA578CD21CBC42C6000ADB36 /* Game.swift */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
+		CA578CD41CBC7711000ADB36 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				CA54D9851CB487AC008C2B4B /* LaunchScreen.storyboard */,
+				CA545CE71CB5803200558615 /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		CA578CD51CBC7727000ADB36 /* etc */ = {
+			isa = PBXGroup;
+			children = (
+				CA54D9801CB487AC008C2B4B /* CodeBlox.xcdatamodeld */,
+				CA54D9881CB487AC008C2B4B /* Info.plist */,
+			);
+			name = etc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA54D97C1CB487AC008C2B4B /* ViewController.swift in Sources */,
+				CA578CD31CBC42C6000ADB36 /* Game.swift in Sources */,
 				CA545CE61CB57FF300558615 /* PuzzleViewController.swift in Sources */,
 				CA545CD91CB48D1C00558615 /* PuzzlePiece.swift in Sources */,
 				CA54D97A1CB487AC008C2B4B /* AppDelegate.swift in Sources */,
