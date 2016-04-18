@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9146D6F1FAC73FBE95C9633A /* Pods_CodeBlox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2688BAD4489AD9190FD39FE8 /* Pods_CodeBlox.framework */; };
+		CA0197EF1CC480EB00293505 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0197EE1CC480EB00293505 /* ScoreViewController.swift */; };
 		CA545CD91CB48D1C00558615 /* PuzzlePiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA545CD81CB48D1C00558615 /* PuzzlePiece.swift */; };
 		CA545CDD1CB48FDF00558615 /* Puzzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA545CDC1CB48FDF00558615 /* Puzzle.swift */; };
 		CA545CDF1CB4BA7200558615 /* DifficultyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA545CDE1CB4BA7200558615 /* DifficultyViewController.swift */; };
@@ -27,6 +28,7 @@
 		2688BAD4489AD9190FD39FE8 /* Pods_CodeBlox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CodeBlox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E46FA77B32414BE47DADE00 /* Pods-CodeBlox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeBlox.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CodeBlox/Pods-CodeBlox.debug.xcconfig"; sourceTree = "<group>"; };
 		AE796D87B4413432E9D5E68E /* Pods-CodeBlox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeBlox.release.xcconfig"; path = "Pods/Target Support Files/Pods-CodeBlox/Pods-CodeBlox.release.xcconfig"; sourceTree = "<group>"; };
+		CA0197EE1CC480EB00293505 /* ScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
 		CA545CD81CB48D1C00558615 /* PuzzlePiece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzlePiece.swift; sourceTree = "<group>"; };
 		CA545CDC1CB48FDF00558615 /* Puzzle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Puzzle.swift; sourceTree = "<group>"; };
 		CA545CDE1CB4BA7200558615 /* DifficultyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DifficultyViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				CA545CDE1CB4BA7200558615 /* DifficultyViewController.swift */,
 				CA545CE11CB54F2F00558615 /* PuzzleTableViewController.swift */,
 				CA545CE51CB57FF300558615 /* PuzzleViewController.swift */,
+				CA0197EE1CC480EB00293505 /* ScoreViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA54D97C1CB487AC008C2B4B /* ViewController.swift in Sources */,
+				CA0197EF1CC480EB00293505 /* ScoreViewController.swift in Sources */,
 				CA578CD31CBC42C6000ADB36 /* Game.swift in Sources */,
 				CA545CE61CB57FF300558615 /* PuzzleViewController.swift in Sources */,
 				CA545CD91CB48D1C00558615 /* PuzzlePiece.swift in Sources */,

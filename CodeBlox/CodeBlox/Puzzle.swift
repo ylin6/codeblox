@@ -12,24 +12,27 @@ import GameKit
 class Puzzle: NSObject {
     var pieces = [PuzzlePiece]();
     var locked:Bool = false;
+    var prompt:String?
     
-    init(pieces:[PuzzlePiece]){
+    init(pieces:[PuzzlePiece], prompt:String){
         self.pieces = pieces;
+        self.prompt = prompt;
     }
     
     func scramble(){
         pieces = GKRandomSource.sharedRandom().arrayByShufflingObjectsInArray(pieces) as! [PuzzlePiece];
     }
     
-    func checkSolved()->Bool{
+    func checkSolved()->[Int]{
+        var wrongArray = [Int]();
         for(var i = 0; i < pieces.count; i++){
-            print("i: \(i) : \(pieces[i].correctIndex)");
+            //print("i: \(i) : \(pieces[i].correctIndex)");
             if(i != pieces[i].correctIndex){
-                return false;
+                wrongArray.append(i);
             }
         }
         
-        return true;
+        return wrongArray;
     }
     
 }

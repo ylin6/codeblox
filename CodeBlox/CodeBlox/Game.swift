@@ -8,13 +8,25 @@
 
 import UIKit
 
+let timeThreshold:Double = 500.0;
+
 class Game: NSObject {
     var score:Int = 0;
-    var timeStarted = NSTimeInterval();
-    var timeFinished:NSTimeInterval?;
+    var timeStarted: NSDate;
+    var timeElapsed: NSTimeInterval?;
     var puzzle:Puzzle;
     
     init(puzzle:Puzzle){
         self.puzzle = puzzle;
+        self.timeStarted = NSDate();
+    }
+    
+    func getScore(){
+        self.timeElapsed = NSDate().timeIntervalSinceDate(self.timeStarted);
+        if (timeElapsed > timeThreshold){
+            self.score = 10;
+        } else{
+            self.score = Int((timeThreshold - timeElapsed!) * 100 / timeThreshold);
+        }
     }
 }

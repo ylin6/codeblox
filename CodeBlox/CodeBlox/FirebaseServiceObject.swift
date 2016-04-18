@@ -19,14 +19,24 @@ class FirebaseServiceObject: NSObject {
         if(input["puzzleName"] != nil ){
             rootRef = Firebase(url: "\(rootRefURL)\(input["difficulty"]!)/\(input["puzzleName"]!)");
             print(rootRef);
-            
             rootRef.observeSingleEventOfType(.Value, withBlock:{ snapshot in
-                for line in snapshot.children.allObjects as! [FDataSnapshot]{
-                    pieces.append(PuzzlePiece(correctIndex: Int(line.key)!-1, codeLine: line.value as! String));
-                    print("\(line.key): \(line.value)");
+                var prompt:String = "";
+                
+                for item in snapshot.children.allObjects as! [FDataSnapshot]{
+                    if(item.key == "Description"){
+                        prompt = item.value as! String;
+                    }
+                    
+                    else{
+                        for line in item.children.allObjects as! [FDataSnapshot]{
+                            pieces.append(PuzzlePiece(correctIndex: Int(line.key)!-1, codeLine: line.value as! String));
+                            //print("\(line.key): \(line.value)");
+                        }
+                    }
                 }
                 
-                let puzzle = Puzzle(pieces: pieces);
+                let puzzle = Puzzle(pieces: pieces, prompt: prompt);
+                print(puzzle);
                 callback(puzzle);
             });
         }
@@ -41,7 +51,7 @@ class FirebaseServiceObject: NSObject {
         rootRef.observeSingleEventOfType(.Value, withBlock:{ snapshot in
             for puzzle in snapshot.children.allObjects as! [FDataSnapshot]{
                 puzzleNames.append(puzzle.key);
-                print(puzzleNames);
+                //print(puzzleNames);
                 callback(puzzleNames);
             }
         });
