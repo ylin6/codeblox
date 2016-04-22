@@ -10,7 +10,7 @@ import UIKit
 
 class PuzzleViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var input:[String:String]?;
-    var game:Game = Game(puzzle: Puzzle(pieces: [], prompt: ""
+    var game:Game = Game(puzzle: Puzzle(pieces: [], prompt: "", expectedOutput:""
         ));
     var wrongArray = [Int]();
     
@@ -25,7 +25,6 @@ class PuzzleViewController: UIViewController, UITableViewDelegate, UITableViewDa
             self.game = Game(puzzle:puzzle);
             self.game.puzzle.scramble();
             self.promptLabel.text = puzzle.prompt;
-            print(self.game);
             self.puzzlePiecesTable.reloadData();
         }
         
@@ -82,9 +81,11 @@ class PuzzleViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func onSubmit(){
+        
+        
         wrongArray = game.puzzle.checkSolved();
-        if(wrongArray.count == 0){
-            print("true");
+        //print("here + \(game.puzzle.runCode())");
+        if(wrongArray.count == 0 || game.puzzle.runCode() ){
             puzzlePiecesTable.reloadData();
             game.getScore();
             performSegueWithIdentifier("showScoreSegue", sender: self);

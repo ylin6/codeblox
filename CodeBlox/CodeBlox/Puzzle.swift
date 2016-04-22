@@ -13,10 +13,13 @@ class Puzzle: NSObject {
     var pieces = [PuzzlePiece]();
     var locked:Bool = false;
     var prompt:String?
+    var expectedOutput:String;
+    var givenOutput:String="";
     
-    init(pieces:[PuzzlePiece], prompt:String){
+    init(pieces:[PuzzlePiece], prompt:String, expectedOutput:String){
         self.pieces = pieces;
         self.prompt = prompt;
+        self.expectedOutput = expectedOutput;
     }
     
     func scramble(){
@@ -33,6 +36,27 @@ class Puzzle: NSObject {
         }
         
         return wrongArray;
+    }
+    
+    func runCode()->Bool{
+        var source:String = "";
+        for(var i = 0; i < pieces.count; i++){
+            source += (pieces[i].codeLine);
+        }
+        
+        print(source);
+        let hackerEarth = HackerEarthServiceObject();
+        
+        hackerEarth.run("b=1;print(b);"){ (result)->Void in
+            self.givenOutput = result;
+            print(self.givenOutput);
+        }
+        
+        if(givenOutput == expectedOutput){
+            return true;
+        } else{
+            return false;
+        }
     }
     
 }

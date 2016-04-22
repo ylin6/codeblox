@@ -10,18 +10,35 @@ import UIKit
 
 class ScoreViewController: UIViewController {
     var game:Game?;
+    var animationTimer: NSTimer!;
+    var count = 0;
+    
     @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var scoreMeterView: MeterView!
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        scoreLabel.text = String(game!.score);
-
-        // Do any additional setup after loading the view.
+        super.viewDidLoad();
+        
+        animationTimer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: "animateMeter", userInfo: nil, repeats: true);
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        scoreMeterView.score = (game?.score)!;
+        scoreMeterView.updateAnimation();
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func animateMeter(){
+        if(count <= game!.score){
+            scoreLabel.text = String(count);
+            count+=1;
+        } else{
+            animationTimer.invalidate();
+        }
     }
     
 

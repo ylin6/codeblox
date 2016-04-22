@@ -21,12 +21,16 @@ class FirebaseServiceObject: NSObject {
             print(rootRef);
             rootRef.observeSingleEventOfType(.Value, withBlock:{ snapshot in
                 var prompt:String = "";
-                
+                var output:String = "";
                 for item in snapshot.children.allObjects as! [FDataSnapshot]{
                     if(item.key == "Description"){
                         prompt = item.value as! String;
                     }
-                    
+                        
+                    else if(item.key == "Output"){
+                        output = item.value as! String;
+                    }
+                        
                     else{
                         for line in item.children.allObjects as! [FDataSnapshot]{
                             pieces.append(PuzzlePiece(correctIndex: Int(line.key)!-1, codeLine: line.value as! String));
@@ -35,7 +39,7 @@ class FirebaseServiceObject: NSObject {
                     }
                 }
                 
-                let puzzle = Puzzle(pieces: pieces, prompt: prompt);
+                let puzzle = Puzzle(pieces: pieces, prompt: prompt, expectedOutput: output);
                 print(puzzle);
                 callback(puzzle);
             });

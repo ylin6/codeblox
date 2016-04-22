@@ -45,7 +45,7 @@ class DifficultyViewController: UIViewController {
         self.difficulty = "Hard";
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
         if(segue.identifier == "showPuzzlesSegue"){
             let destinationController = segue.destinationViewController as! PuzzleTableViewController;
             destinationController.difficulty = self.difficulty;
