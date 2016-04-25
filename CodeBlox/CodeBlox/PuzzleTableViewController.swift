@@ -61,6 +61,10 @@ class PuzzleTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         performSegueWithIdentifier("showPuzzleSegue", sender: self);
     }
+    
+    @IBAction func backToPuzzles(segue:UIStoryboardSegue) {
+        
+    }
 
 
 }

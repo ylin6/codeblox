@@ -24,6 +24,7 @@
 		CA54D9841CB487AC008C2B4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA54D9831CB487AC008C2B4B /* Assets.xcassets */; };
 		CA54D9871CB487AC008C2B4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA54D9851CB487AC008C2B4B /* LaunchScreen.storyboard */; };
 		CA578CD31CBC42C6000ADB36 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA578CD21CBC42C6000ADB36 /* Game.swift */; };
+		CA923EA61CCD6BDA00379E56 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA923EA51CCD6BDA00379E56 /* GameKit.framework */; };
 		CA9BEFBD1CC6ED2000265A64 /* GameCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9BEFBC1CC6ED2000265A64 /* GameCenterViewController.swift */; };
 		CA9BEFBF1CC6EE7A00265A64 /* GCHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9BEFBE1CC6EE7A00265A64 /* GCHelper.swift */; };
 		CAC0D26A1CB48B8A00AE9D9C /* FirebaseServiceObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC0D2691CB48B8A00AE9D9C /* FirebaseServiceObject.swift */; };
@@ -51,6 +52,7 @@
 		CA54D9861CB487AC008C2B4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA54D9881CB487AC008C2B4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA578CD21CBC42C6000ADB36 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		CA923EA51CCD6BDA00379E56 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		CA9BEFBC1CC6ED2000265A64 /* GameCenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCenterViewController.swift; sourceTree = "<group>"; };
 		CA9BEFBE1CC6EE7A00265A64 /* GCHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCHelper.swift; sourceTree = "<group>"; };
 		CAC0D2691CB48B8A00AE9D9C /* FirebaseServiceObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseServiceObject.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9146D6F1FAC73FBE95C9633A /* Pods_CodeBlox.framework in Frameworks */,
+				CA923EA61CCD6BDA00379E56 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +83,7 @@
 		388CA13BF65AF3E3F429A37D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CA923EA51CCD6BDA00379E56 /* GameKit.framework */,
 				2688BAD4489AD9190FD39FE8 /* Pods_CodeBlox.framework */,
 			);
 			name = Frameworks;
@@ -200,7 +204,7 @@
 						DevelopmentTeam = 47J734W9F8;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};

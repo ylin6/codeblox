@@ -15,6 +15,8 @@ class Game: NSObject {
     var timeStarted: NSDate;
     var timeElapsed: NSTimeInterval?;
     var puzzle:Puzzle;
+    var attempts = 0;
+    
     
     init(puzzle:Puzzle){
         self.puzzle = puzzle;

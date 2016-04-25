@@ -84,6 +84,7 @@ class PuzzleViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         
         wrongArray = game.puzzle.checkSolved();
+        game.attempts+=1;
         //print("here + \(game.puzzle.runCode())");
         if(wrongArray.count == 0 || game.puzzle.runCode() ){
             puzzlePiecesTable.reloadData();
