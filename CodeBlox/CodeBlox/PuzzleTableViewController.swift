@@ -43,9 +43,14 @@ class PuzzleTableViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = puzzleTable.dequeueReusableCellWithIdentifier("puzzleCell", forIndexPath: indexPath) as UITableViewCell!
-        cell.textLabel?.text = puzzleNames[indexPath.row];
-        // Configure the cell...
+        let cell = puzzleTable.dequeueReusableCellWithIdentifier("puzzleCell", forIndexPath: indexPath) as! LevelTableViewCell;
+        cell.levelLabel?.text = puzzleNames[indexPath.row];
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        if let name = defaults.stringForKey(difficulty!+puzzleNames[indexPath.row]){
+            cell.levelLabel?.textColor = UIColor(red: 51/255.0, green: 255/255.0, blue: 153/255.0, alpha: 1.0);
+        }
+        
         return cell
     }
 

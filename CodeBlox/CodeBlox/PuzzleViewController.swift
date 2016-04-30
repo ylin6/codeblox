@@ -20,14 +20,15 @@ class PuzzleViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func viewDidLoad() {
         super.viewDidLoad();
-        let fb = FirebaseServiceObject();
-        fb.getPuzzle(input!){ (puzzle)->Void in
-            self.game = Game(puzzle:puzzle);
-            self.game.puzzle.scramble();
-            self.promptLabel.text = puzzle.prompt;
-            self.puzzlePiecesTable.reloadData();
+        if(game.multiplayer){
+            let fb = FirebaseServiceObject();
+            fb.getPuzzle(input!){ (puzzle)->Void in
+                self.game = Game(puzzle:puzzle);
+                self.game.puzzle.scramble();
+                self.promptLabel.text = puzzle.prompt;
+                self.puzzlePiecesTable.reloadData();
+            }
         }
-        
         puzzlePiecesTable.editing = true;
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Submit", style: .Plain, target: self, action: "onSubmit");
     }
@@ -66,6 +67,7 @@ class PuzzleViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return true
     }
     
+    
     func tableView(tableView: UITableView, shouldIndentWhileEditingRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         return false;
     }
@@ -89,6 +91,11 @@ class PuzzleViewController: UIViewController, UITableViewDelegate, UITableViewDa
         if(wrongArray.count == 0 || game.puzzle.runCode() ){
             puzzlePiecesTable.reloadData();
             game.getScore();
+            
+            // Save Score
+            let defaults = NSUserDefaults.standardUserDefaults();
+            defaults.setObject(String(game.score), forKey: input!["difficulty"]!+input!["puzzleName"]!)
+            
             performSegueWithIdentifier("showScoreSegue", sender: self);
         } else{
             print("false");

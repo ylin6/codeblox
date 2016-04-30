@@ -26,21 +26,33 @@ class ScoreViewController: UIViewController {
         
         timeLabel.text = timeToString();
         attempLabel.text = String(game!.attempts);
-        animationTimer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: "animateMeter", userInfo: nil, repeats: true);
     }
     
     func timeToString()->String{
-        var minute:String;
-        var second:String;
+        var minute:Int;
+        var second:Int;
         
-        minute = String(Int((game?.timeElapsed)! / 60));
-        second = String(Int((game?.timeElapsed)! % 60 ));
-        return "\(minute):\(second)";
+        minute = Int((game?.timeElapsed)! / 60);
+        second = Int((game?.timeElapsed)! % 60);
+        
+        var minuteString:String = "\(minute)";
+        var secondString:String = "\(second)";
+        
+        if(minute<10){
+            minuteString = "0\(minute)";
+        }
+        
+        if(second<10){
+            secondString = "0\(second)";
+        }
+        
+        return "\(minuteString):\(secondString)";
     }
     
     override func viewDidAppear(animated: Bool) {
         scoreMeterView.score = (game?.score)!;
         scoreMeterView.updateAnimation();
+        animationTimer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: "animateMeter", userInfo: nil, repeats: true);
     }
 
     override func didReceiveMemoryWarning() {

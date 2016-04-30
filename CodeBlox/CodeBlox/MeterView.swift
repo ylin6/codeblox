@@ -22,7 +22,7 @@ class MeterView: UIView {
         let animation = CABasicAnimation(keyPath: "strokeEnd");
         animation.fromValue = 0;
         animation.toValue = 1;
-        animation.duration = 1;
+        animation.duration = 2;
         animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut);
         animation.repeatCount = 1;
         return animation;
@@ -96,6 +96,7 @@ class MeterView: UIView {
         else {
             meterLayer.removeAnimationForKey("strokeEnd")
         }
+        
     }
     /*
     // Only override drawRect: if you perform custom drawing.

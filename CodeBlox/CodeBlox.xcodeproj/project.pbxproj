@@ -12,6 +12,7 @@
 		CA1B2D331CC5729900BE383D /* MeterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1B2D321CC5729900BE383D /* MeterView.swift */; };
 		CA210C0C1CC7C2F0007CE870 /* HackerEarthServiceObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA210C0B1CC7C2F0007CE870 /* HackerEarthServiceObject.swift */; };
 		CA210C0E1CC7CA81007CE870 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA210C0D1CC7CA81007CE870 /* SwiftyJSON.swift */; };
+		CA30FFDB1CD3CB0400043364 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA30FFDA1CD3CB0400043364 /* GameKit.framework */; };
 		CA545CD91CB48D1C00558615 /* PuzzlePiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA545CD81CB48D1C00558615 /* PuzzlePiece.swift */; };
 		CA545CDD1CB48FDF00558615 /* Puzzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA545CDC1CB48FDF00558615 /* Puzzle.swift */; };
 		CA545CDF1CB4BA7200558615 /* DifficultyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA545CDE1CB4BA7200558615 /* DifficultyViewController.swift */; };
@@ -24,9 +25,10 @@
 		CA54D9841CB487AC008C2B4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA54D9831CB487AC008C2B4B /* Assets.xcassets */; };
 		CA54D9871CB487AC008C2B4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA54D9851CB487AC008C2B4B /* LaunchScreen.storyboard */; };
 		CA578CD31CBC42C6000ADB36 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA578CD21CBC42C6000ADB36 /* Game.swift */; };
-		CA923EA61CCD6BDA00379E56 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA923EA51CCD6BDA00379E56 /* GameKit.framework */; };
+		CA579BDB1CD3D37E00FC717A /* EasyGameCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA579BDA1CD3D37E00FC717A /* EasyGameCenter.swift */; };
+		CA579BDD1CD3D3AE00FC717A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA579BDC1CD3D3AE00FC717A /* SystemConfiguration.framework */; };
 		CA9BEFBD1CC6ED2000265A64 /* GameCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9BEFBC1CC6ED2000265A64 /* GameCenterViewController.swift */; };
-		CA9BEFBF1CC6EE7A00265A64 /* GCHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9BEFBE1CC6EE7A00265A64 /* GCHelper.swift */; };
+		CAADF5F91CCE741A00612E47 /* LevelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAADF5F81CCE741A00612E47 /* LevelTableViewCell.swift */; };
 		CAC0D26A1CB48B8A00AE9D9C /* FirebaseServiceObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC0D2691CB48B8A00AE9D9C /* FirebaseServiceObject.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +40,7 @@
 		CA1B2D321CC5729900BE383D /* MeterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeterView.swift; sourceTree = "<group>"; };
 		CA210C0B1CC7C2F0007CE870 /* HackerEarthServiceObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HackerEarthServiceObject.swift; sourceTree = "<group>"; };
 		CA210C0D1CC7CA81007CE870 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		CA30FFDA1CD3CB0400043364 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		CA545CD81CB48D1C00558615 /* PuzzlePiece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzlePiece.swift; sourceTree = "<group>"; };
 		CA545CDC1CB48FDF00558615 /* Puzzle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Puzzle.swift; sourceTree = "<group>"; };
 		CA545CDE1CB4BA7200558615 /* DifficultyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DifficultyViewController.swift; sourceTree = "<group>"; };
@@ -52,9 +55,10 @@
 		CA54D9861CB487AC008C2B4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA54D9881CB487AC008C2B4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA578CD21CBC42C6000ADB36 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
-		CA923EA51CCD6BDA00379E56 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		CA579BDA1CD3D37E00FC717A /* EasyGameCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasyGameCenter.swift; sourceTree = "<group>"; };
+		CA579BDC1CD3D3AE00FC717A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		CA9BEFBC1CC6ED2000265A64 /* GameCenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCenterViewController.swift; sourceTree = "<group>"; };
-		CA9BEFBE1CC6EE7A00265A64 /* GCHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCHelper.swift; sourceTree = "<group>"; };
+		CAADF5F81CCE741A00612E47 /* LevelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LevelTableViewCell.swift; path = ../LevelTableViewCell.swift; sourceTree = "<group>"; };
 		CAC0D2691CB48B8A00AE9D9C /* FirebaseServiceObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseServiceObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,8 +67,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA579BDD1CD3D3AE00FC717A /* SystemConfiguration.framework in Frameworks */,
 				9146D6F1FAC73FBE95C9633A /* Pods_CodeBlox.framework in Frameworks */,
-				CA923EA61CCD6BDA00379E56 /* GameKit.framework in Frameworks */,
+				CA30FFDB1CD3CB0400043364 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +88,8 @@
 		388CA13BF65AF3E3F429A37D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CA923EA51CCD6BDA00379E56 /* GameKit.framework */,
+				CA579BDC1CD3D3AE00FC717A /* SystemConfiguration.framework */,
+				CA30FFDA1CD3CB0400043364 /* GameKit.framework */,
 				2688BAD4489AD9190FD39FE8 /* Pods_CodeBlox.framework */,
 			);
 			name = Frameworks;
@@ -124,7 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				CA54D9791CB487AC008C2B4B /* AppDelegate.swift */,
-				CA9BEFBE1CC6EE7A00265A64 /* GCHelper.swift */,
+				CA579BDA1CD3D37E00FC717A /* EasyGameCenter.swift */,
 				CA210C0D1CC7CA81007CE870 /* SwiftyJSON.swift */,
 				CA545CE01CB54EFC00558615 /* ViewControllers */,
 				CA578CCF1CBC4266000ADB36 /* Objects */,
@@ -138,6 +144,7 @@
 		CA578CCF1CBC4266000ADB36 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				CAADF5F81CCE741A00612E47 /* LevelTableViewCell.swift */,
 				CAC0D2691CB48B8A00AE9D9C /* FirebaseServiceObject.swift */,
 				CA545CDC1CB48FDF00558615 /* Puzzle.swift */,
 				CA545CD81CB48D1C00558615 /* PuzzlePiece.swift */,
@@ -201,7 +208,7 @@
 				TargetAttributes = {
 					CA54D9751CB487AC008C2B4B = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = 47J734W9F8;
+						DevelopmentTeam = 8UF42U25CY;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
 								enabled = 1;
@@ -295,7 +302,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA54D97C1CB487AC008C2B4B /* ViewController.swift in Sources */,
-				CA9BEFBF1CC6EE7A00265A64 /* GCHelper.swift in Sources */,
 				CA0197EF1CC480EB00293505 /* ScoreViewController.swift in Sources */,
 				CA210C0C1CC7C2F0007CE870 /* HackerEarthServiceObject.swift in Sources */,
 				CA1B2D331CC5729900BE383D /* MeterView.swift in Sources */,
@@ -303,6 +309,8 @@
 				CA545CE61CB57FF300558615 /* PuzzleViewController.swift in Sources */,
 				CA545CD91CB48D1C00558615 /* PuzzlePiece.swift in Sources */,
 				CA9BEFBD1CC6ED2000265A64 /* GameCenterViewController.swift in Sources */,
+				CAADF5F91CCE741A00612E47 /* LevelTableViewCell.swift in Sources */,
+				CA579BDB1CD3D37E00FC717A /* EasyGameCenter.swift in Sources */,
 				CA54D97A1CB487AC008C2B4B /* AppDelegate.swift in Sources */,
 				CA545CE21CB54F2F00558615 /* PuzzleTableViewController.swift in Sources */,
 				CA210C0E1CC7CA81007CE870 /* SwiftyJSON.swift in Sources */,
@@ -427,7 +435,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CodeBlox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = in.yuchengl.CodeBlox;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.nd.codeblox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -442,7 +450,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CodeBlox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = in.yuchengl.CodeBlox;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.nd.codeblox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

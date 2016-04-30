@@ -16,6 +16,7 @@ class Game: NSObject {
     var timeElapsed: NSTimeInterval?;
     var puzzle:Puzzle;
     var attempts = 0;
+    var multiplayer:Bool = false;
     
     
     init(puzzle:Puzzle){

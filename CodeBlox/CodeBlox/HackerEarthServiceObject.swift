@@ -17,7 +17,7 @@ class HackerEarthServiceObject: NSObject {
     func run(source:String, callback:(String) -> Void){
         
         var output:String = "";
-        let requestData:String  = "client_secret=\(secretKey)&source=\(source)&async=0&lang=PYTHON&time_limit=5&memory_limit=262144";
+        let requestData:String  = "client_secret=\(secretKey)&source=\(source)&async=0&lang=JAVASCRIPT&time_limit=5&memory_limit=262144";
         let request = NSMutableURLRequest(URL: endpoint);
         request.HTTPMethod = "POST";
         request.HTTPBody = requestData.dataUsingEncoding(NSUTF8StringEncoding);

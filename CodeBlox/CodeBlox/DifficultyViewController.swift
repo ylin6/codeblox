@@ -38,11 +38,13 @@ class DifficultyViewController: UIViewController {
     
     @IBAction func mediumPuzzles(sender: AnyObject) {
         self.difficulty = "Medium";
+        performSegueWithIdentifier("showPuzzlesSegue", sender: self);
         
     }
     
     @IBAction func hardPuzzles(sender: AnyObject) {
         self.difficulty = "Hard";
+        performSegueWithIdentifier("showPuzzlesSegue", sender: self);
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
