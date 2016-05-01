@@ -12,9 +12,12 @@ import GameKit
 class GameCenterViewController: UIViewController, EGCDelegate {
     var puzzle: Puzzle!;
     var randomNumber:UInt32!;
-    
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var leaderBoardButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad();
+        loginButton.layer.cornerRadius = loginButton.bounds.height/2;
+        leaderBoardButton.layer.cornerRadius = leaderBoardButton.bounds.height/2;
         EGC.sharedInstance(self);
         // Do any additional setup after loading the view.
     }
@@ -24,12 +27,8 @@ class GameCenterViewController: UIViewController, EGCDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func EGCAuthentified(authentified:Bool) {
-        if(authentified){
-            EGC.findMatchWithMinPlayers(2, maxPlayers: 2);
-        } else{
-            EGC.showGameCenterAuthentication();
-        }
+    override func viewDidAppear(animated: Bool) {
+        EGC.delegate = self;
     }
     
     func sendRandomPuzzle(){
@@ -55,10 +54,12 @@ class GameCenterViewController: UIViewController, EGCDelegate {
     }
     
     func ECGMatchStarted(){
-        sendRandomPuzzle();
+        print("matchStarted");
+        //sendRandomPuzzle();
     }
     
     func ECGMatchRecept(match: GKMatch, didReceiveData data: NSData, fromPlayer playerID: String){
+        /*
         let dictionary:[String: AnyObject] = (NSKeyedUnarchiver.unarchiveObjectWithData(data)! as? [String: AnyObject])!;
         if(dictionary["packetName"] as! String == "puzzle"){
             if(dictionary["randomNumber"] as! UInt32 > randomNumber){
@@ -66,7 +67,9 @@ class GameCenterViewController: UIViewController, EGCDelegate {
             } else if (dictionary["randomNumber"] as! UInt32 > randomNumber) {
                 sendRandomNumber();
             }
-        }
+        }*/
+        
+        print("MATCHRECEPT");
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender:AnyObject?){
@@ -79,6 +82,15 @@ class GameCenterViewController: UIViewController, EGCDelegate {
     }
     
     
+    @IBAction func login(sender: AnyObject) {
+        EGC.findMatchWithMinPlayers(2, maxPlayers: 2);
+    }
+    
+
+    @IBAction func showLeaderBoard(sender: AnyObject) {
+        EGC.showGameCenterLeaderboard(leaderboardIdentifier: "codebloxleaderboard");
+    }
+   
 
     /*
     // MARK: - Navigation

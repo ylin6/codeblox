@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ScoreViewController: UIViewController {
+class ScoreViewController: UIViewController, EGCDelegate {
     var game:Game?;
     
     var animationTimer: NSTimer!;
@@ -23,10 +23,37 @@ class ScoreViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad();
         rewindButton.layer.cornerRadius = 75/2;
-        
+        EGC.sharedInstance(self);
         timeLabel.text = timeToString();
         attempLabel.text = String(game!.attempts);
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        EGC.delegate = self;
+        scoreMeterView.score = (game?.score)!;
+        scoreMeterView.updateAnimation();
+        animationTimer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: "animateMeter", userInfo: nil, repeats: true);
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    func animateMeter(){
+        if(count <= game!.score){
+            scoreLabel.text = String(count);
+            count+=1;
+        } else{
+            animationTimer.invalidate();
+        }
+    }
+    
+    func EGCAuthentified(authentified:Bool) {
+        EGC.reportScoreLeaderboard(leaderboardIdentifier: "codebloxleaderboard", score: game!.score);
+    }
+    
+    
     
     func timeToString()->String{
         var minute:Int;
@@ -48,26 +75,7 @@ class ScoreViewController: UIViewController {
         
         return "\(minuteString):\(secondString)";
     }
-    
-    override func viewDidAppear(animated: Bool) {
-        scoreMeterView.score = (game?.score)!;
-        scoreMeterView.updateAnimation();
-        animationTimer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: "animateMeter", userInfo: nil, repeats: true);
-    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    func animateMeter(){
-        if(count <= game!.score){
-            scoreLabel.text = String(count);
-            count+=1;
-        } else{
-            animationTimer.invalidate();
-        }
-    }
     
     
     

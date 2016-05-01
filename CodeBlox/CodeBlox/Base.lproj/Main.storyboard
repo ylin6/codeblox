@@ -31,7 +31,7 @@
                                 <rect key="frame" x="165" y="384" width="270" height="75"/>
                                 <color key="backgroundColor" red="1" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="15"/>
-                                <state key="normal" title="Multiplayer">
+                                <state key="normal" title="Game Center">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -257,9 +257,101 @@
                     <view key="view" contentMode="scaleToFill" id="gHl-BX-Xs0">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ul-Ow-euu">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.20000000000000001" green="1" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="gxv-vJ-irF">
+                                        <variation key="heightClass=regular" constant="75"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="46" id="pdE-pl-DLx">
+                                        <variation key="heightClass=regular" constant="275"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="15"/>
+                                <state key="normal" title="Play Online!">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="gxv-vJ-irF"/>
+                                        <exclude reference="pdE-pl-DLx"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular" misplaced="YES">
+                                    <rect key="frame" x="162" y="485" width="275" height="75"/>
+                                    <mask key="constraints">
+                                        <include reference="gxv-vJ-irF"/>
+                                        <include reference="pdE-pl-DLx"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="login:" destination="mr3-fD-MZ2" eventType="touchUpInside" id="3Eq-Cb-GSr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4R-7k-PYk">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.20000000000000001" green="1" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="15"/>
+                                <state key="normal" title="Leaderboard">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="showLeaderBoard:" destination="mr3-fD-MZ2" eventType="touchUpInside" id="fIU-Tc-mkz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="0Qh-jw-0PA" firstAttribute="top" secondItem="A4R-7k-PYk" secondAttribute="bottom" constant="85" id="3ms-op-noO"/>
+                            <constraint firstItem="A4R-7k-PYk" firstAttribute="width" secondItem="0ul-Ow-euu" secondAttribute="width" id="Jpx-TX-aUm"/>
+                            <constraint firstItem="0ul-Ow-euu" firstAttribute="height" secondItem="gHl-BX-Xs0" secondAttribute="height" multiplier="1/3" id="KGY-7e-3y5"/>
+                            <constraint firstItem="0ul-Ow-euu" firstAttribute="centerY" secondItem="gHl-BX-Xs0" secondAttribute="centerY" id="KQx-Vl-j2r"/>
+                            <constraint firstItem="0ul-Ow-euu" firstAttribute="top" secondItem="vjO-ZL-gmq" secondAttribute="bottom" constant="232" id="ZZq-TO-zBb"/>
+                            <constraint firstItem="A4R-7k-PYk" firstAttribute="centerX" secondItem="0ul-Ow-euu" secondAttribute="centerX" id="e8d-Es-gMS"/>
+                            <constraint firstItem="A4R-7k-PYk" firstAttribute="top" secondItem="0ul-Ow-euu" secondAttribute="bottom" constant="30" id="hxT-R6-XuF"/>
+                            <constraint firstItem="A4R-7k-PYk" firstAttribute="height" secondItem="0ul-Ow-euu" secondAttribute="height" id="nVA-oW-0OU"/>
+                            <constraint firstItem="0ul-Ow-euu" firstAttribute="centerX" secondItem="gHl-BX-Xs0" secondAttribute="centerX" id="vcW-9r-QJy"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="0ul-Ow-euu"/>
+                                <exclude reference="A4R-7k-PYk"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="KGY-7e-3y5"/>
+                                <exclude reference="KQx-Vl-j2r"/>
+                                <exclude reference="ZZq-TO-zBb"/>
+                                <exclude reference="vcW-9r-QJy"/>
+                                <exclude reference="Jpx-TX-aUm"/>
+                                <exclude reference="e8d-Es-gMS"/>
+                                <exclude reference="hxT-R6-XuF"/>
+                                <exclude reference="nVA-oW-0OU"/>
+                                <exclude reference="3ms-op-noO"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="subviews">
+                                <include reference="0ul-Ow-euu"/>
+                                <include reference="A4R-7k-PYk"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="KGY-7e-3y5"/>
+                                <exclude reference="KQx-Vl-j2r"/>
+                                <exclude reference="ZZq-TO-zBb"/>
+                                <include reference="vcW-9r-QJy"/>
+                                <include reference="Jpx-TX-aUm"/>
+                                <include reference="e8d-Es-gMS"/>
+                                <include reference="hxT-R6-XuF"/>
+                                <include reference="nVA-oW-0OU"/>
+                                <include reference="3ms-op-noO"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="leaderBoardButton" destination="A4R-7k-PYk" id="g3c-LC-VFi"/>
+                        <outlet property="loginButton" destination="0ul-Ow-euu" id="0Uy-8h-MfR"/>
                         <segue destination="3vM-FM-iCh" kind="presentation" identifier="showGameSegue" id="FT4-Mi-Nql"/>
                     </connections>
                 </viewController>

@@ -20,7 +20,7 @@ class PuzzleViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func viewDidLoad() {
         super.viewDidLoad();
-        if(game.multiplayer){
+        if(!game.multiplayer){
             let fb = FirebaseServiceObject();
             fb.getPuzzle(input!){ (puzzle)->Void in
                 self.game = Game(puzzle:puzzle);
@@ -87,7 +87,7 @@ class PuzzleViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         wrongArray = game.puzzle.checkSolved();
         game.attempts+=1;
-        //print("here + \(game.puzzle.runCode())");
+        print("here + \(game.puzzle.runCode())");
         if(wrongArray.count == 0 || game.puzzle.runCode() ){
             puzzlePiecesTable.reloadData();
             game.getScore();

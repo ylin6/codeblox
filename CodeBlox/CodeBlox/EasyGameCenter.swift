@@ -977,7 +977,7 @@ public class EGC: NSObject, GKGameCenterControllerDelegate, GKMatchmakerViewCont
         }
         
 
-        let playerIDs = match.players.map { $0.playerID }
+        let playerIDs = match.players.map { $0.playerID! }
         
         guard let hasePlayerIDS = playerIDs as? [String] else {
             EGC.printLogEGC("No Player")
