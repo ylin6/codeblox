@@ -3,4 +3,6 @@ CodeBlox is an educational app/fun game built for iOS 9.0 and above. The app all
 
 Firebase is used to store the different puzzles with the code for the puzzle, a short description and the proper output of the code. The HackerEarth API is used to validate that the code compiles correctly and therefore the puzzle has been correctly unscrambled. 
 
-To run the app simply download the full project and build it in XCode using the simulator for an iOS 9.0 device or higher or a physical device.
+To run the app simply download the full project ( **OPEN THE WORKSPACE FILE NOT THE PROJECT FILE** ) and build it in XCode using the simulator for an iOS 9.0 device or higher or a physical device.
+
+Presentation slides: https://docs.google.com/presentation/d/1BBN190hoW2ZR1BOUv2Pjy5V3iOhwAgqpgLtguFovkBE/edit?usp=sharing.
