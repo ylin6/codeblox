@@ -57,6 +57,7 @@
 		CA578CD21CBC42C6000ADB36 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		CA579BDA1CD3D37E00FC717A /* EasyGameCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasyGameCenter.swift; sourceTree = "<group>"; };
 		CA579BDC1CD3D3AE00FC717A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		CA8389701CD9117900745B18 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../../Library/Developer/Xcode/DerivedData/CodeBlox-hfpqdxpyuqkvudgoddydmvyodayg/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		CA9BEFBC1CC6ED2000265A64 /* GameCenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCenterViewController.swift; sourceTree = "<group>"; };
 		CAADF5F81CCE741A00612E47 /* LevelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LevelTableViewCell.swift; path = ../LevelTableViewCell.swift; sourceTree = "<group>"; };
 		CAC0D2691CB48B8A00AE9D9C /* FirebaseServiceObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseServiceObject.swift; sourceTree = "<group>"; };
@@ -88,6 +89,7 @@
 		388CA13BF65AF3E3F429A37D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CA8389701CD9117900745B18 /* Alamofire.framework */,
 				CA579BDC1CD3D3AE00FC717A /* SystemConfiguration.framework */,
 				CA30FFDA1CD3CB0400043364 /* GameKit.framework */,
 				2688BAD4489AD9190FD39FE8 /* Pods_CodeBlox.framework */,

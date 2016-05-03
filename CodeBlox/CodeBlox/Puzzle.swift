@@ -44,7 +44,6 @@ class Puzzle: NSObject {
             source += (pieces[i].codeLine);
         }
         
-        print(source);
         let hackerEarth = HackerEarthServiceObject();
         
         hackerEarth.run(source){ (result)->Void in

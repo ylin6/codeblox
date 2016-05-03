@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class HackerEarthServiceObject: NSObject {
     
@@ -17,10 +18,14 @@ class HackerEarthServiceObject: NSObject {
     func run(source:String, callback:(String) -> Void){
         
         var output:String = "";
+        
+        /*
         let requestData:String  = "client_secret=\(secretKey)&source=\(source)&async=0&lang=JAVASCRIPT&time_limit=5&memory_limit=262144";
         let request = NSMutableURLRequest(URL: endpoint);
         request.HTTPMethod = "POST";
         request.HTTPBody = requestData.dataUsingEncoding(NSUTF8StringEncoding);
+        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        request.setValue("application/json", forHTTPHeaderField: "Accept");
         let task = NSURLSession.sharedSession().dataTaskWithRequest(request){ data, response, error in
             let json = JSON(data: data!);
             print(json);
@@ -32,8 +37,24 @@ class HackerEarthServiceObject: NSObject {
             }
         }
             
-        task.resume();
-        callback(output);
-    
+        task.resume();*/
+        
+        var param = ["source": source, "client_secret": secretKey, "async": 0, "lang": "JAVASCRIPT"]
+        Alamofire.request(.POST, endpoint, parameters: param as! [String : AnyObject])
+            .responseJSON { response in
+                
+                if let data = response.result.value as? [String: AnyObject] {
+                    let o = data["run_status"] as? [String: AnyObject];
+                    
+                    if(o!["output"] == nil){
+                        output = "Error"
+                    } else{
+                        output = o!["output"] as! String;
+                    }
+                }
+                print(output);
+                callback(output);
+        }
     }
+    
 }

@@ -87,6 +87,32 @@ class PuzzleViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         wrongArray = game.puzzle.checkSolved();
         game.attempts+=1;
+        var source:String = "";
+        for(var i = 0; i < game.puzzle.pieces.count; i += 1){
+            source += (game.puzzle.pieces[i].codeLine);
+        }
+        
+        let hackerEarth = HackerEarthServiceObject();
+            hackerEarth.run(source){ (result)->Void in
+                if (result == self.game.puzzle.expectedOutput || self.wrongArray.count == 0){
+                    self.puzzlePiecesTable.reloadData();
+                    self.game.getScore();
+                    var this = self;
+                    // Save Score
+                    let defaults = NSUserDefaults.standardUserDefaults();
+                    defaults.setObject(String(self.game.score), forKey: self.input!["difficulty"]!+self.input!["puzzleName"]!)
+                    
+                    self.performSegueWithIdentifier("showScoreSegue", sender: self);
+                }
+                
+                else{
+                    self.puzzlePiecesTable.reloadData();
+
+                }
+            }
+        
+
+        /*
         print("here + \(game.puzzle.runCode())");
         if(wrongArray.count == 0 || game.puzzle.runCode() ){
             puzzlePiecesTable.reloadData();
@@ -100,7 +126,7 @@ class PuzzleViewController: UIViewController, UITableViewDelegate, UITableViewDa
         } else{
             print("false");
             puzzlePiecesTable.reloadData();
-        }
+        }*/
     }
 
     /*

@@ -15,38 +15,6 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "9"
             endingLineNumber = "9">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CodeBlox.FirebaseServiceObject.__deallocating_deinit"
-                  moduleName = "CodeBlox"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Yucheng/Dev/iOS/codeBlox/CodeBlox/CodeBlox/FirebaseServiceObject.swift"
-                  timestampString = "483941998.464702"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "4">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CodeBlox.FirebaseServiceObject.init () -&gt; CodeBlox.FirebaseServiceObject"
-                  moduleName = "CodeBlox"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Yucheng/Dev/iOS/codeBlox/CodeBlox/CodeBlox/FirebaseServiceObject.swift"
-                  timestampString = "483941998.464866"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "31">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -118,11 +86,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CodeBlox/ViewController.swift"
-            timestampString = "483942469.04232"
+            timestampString = "483982811.263836"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
             landmarkName = "singlePlayer(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -134,11 +102,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CodeBlox/ViewController.swift"
-            timestampString = "483942469.04232"
+            timestampString = "483982811.263836"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
             landmarkName = "singlePlayer(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -198,11 +166,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CodeBlox/DifficultyViewController.swift"
-            timestampString = "483942596.694503"
+            timestampString = "483982811.263836"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
             landmarkName = "DifficultyViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -226,7 +194,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CodeBlox/Puzzle.swift"
@@ -370,7 +338,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CodeBlox/DifficultyViewController.swift"
@@ -390,23 +358,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CodeBlox/HackerEarthServiceObject.swift"
-            timestampString = "482862121.933064"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "run(_:callback:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CodeBlox/HackerEarthServiceObject.swift"
-            timestampString = "482868182.721424"
+            timestampString = "483988358.797046"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "18"
@@ -422,11 +374,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CodeBlox/HackerEarthServiceObject.swift"
-            timestampString = "482868182.721424"
+            timestampString = "483988358.797046"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "run(_:callback:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CodeBlox/HackerEarthServiceObject.swift"
+            timestampString = "483988358.797046"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
             landmarkName = "run(_:callback:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -438,11 +406,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CodeBlox/HackerEarthServiceObject.swift"
-            timestampString = "483724313.268615"
+            timestampString = "483988358.797046"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
             landmarkName = "run(_:callback:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -637,6 +605,22 @@
                   offsetFromSymbolStart = "32">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CodeBlox/HackerEarthServiceObject.swift"
+            timestampString = "483990021.0037"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "run(_:callback:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
