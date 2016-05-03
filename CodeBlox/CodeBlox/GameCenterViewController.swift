@@ -16,8 +16,8 @@ class GameCenterViewController: UIViewController, EGCDelegate {
     @IBOutlet weak var leaderBoardButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad();
-        loginButton.layer.cornerRadius = loginButton.bounds.height/2;
-        leaderBoardButton.layer.cornerRadius = leaderBoardButton.bounds.height/2;
+        loginButton.layer.cornerRadius = 75/2;
+        leaderBoardButton.layer.cornerRadius = 75/2;
         EGC.sharedInstance(self);
         // Do any additional setup after loading the view.
     }
@@ -28,6 +28,7 @@ class GameCenterViewController: UIViewController, EGCDelegate {
     }
     
     override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         EGC.delegate = self;
     }
     

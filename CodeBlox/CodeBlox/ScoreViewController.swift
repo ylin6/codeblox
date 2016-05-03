@@ -19,16 +19,19 @@ class ScoreViewController: UIViewController, EGCDelegate {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var attempLabel: UILabel!
     @IBOutlet weak var rewindButton: UIButton!
+    @IBOutlet weak var leaderboardButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad();
         rewindButton.layer.cornerRadius = 75/2;
+        leaderboardButton.layer.cornerRadius = 75/2;
         EGC.sharedInstance(self);
         timeLabel.text = timeToString();
         attempLabel.text = String(game!.attempts);
     }
     
     override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         EGC.delegate = self;
         scoreMeterView.score = (game?.score)!;
         scoreMeterView.updateAnimation();
@@ -74,6 +77,12 @@ class ScoreViewController: UIViewController, EGCDelegate {
         }
         
         return "\(minuteString):\(secondString)";
+    }
+    
+    
+    @IBAction func showLeaderboard(sender: AnyObject) {
+        EGC.showGameCenterLeaderboard(leaderboardIdentifier: "codebloxleaderboard");
+
     }
 
     
