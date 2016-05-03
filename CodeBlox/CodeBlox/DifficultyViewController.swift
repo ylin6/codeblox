@@ -21,6 +21,23 @@ class DifficultyViewController: UIViewController {
         mediumButton.layer.cornerRadius = mediumButton.bounds.height/2;
         hardButton.layer.cornerRadius = hardButton.bounds.height/2;
         
+        let eby = easyButton.center.y;
+        let mby = mediumButton.center.y;
+        let hby = hardButton.center.y
+        
+        
+        easyButton.center.y = self.view.bounds.height + 500;
+        mediumButton.center.y = self.view.bounds.height + 1000;
+        hardButton.center.y = self.view.bounds.height + 500;
+        
+        UIView.animateWithDuration(0.5, delay: 0.0, options: UIViewAnimationOptions.CurveEaseOut, animations:{
+            self.easyButton.center.y = eby;
+            self.mediumButton.center.y = mby;
+            self.hardButton.center.y = hby;
+            }, completion: nil);
+        
+
+        
         //easyButton.center.y = super.view.center.y/2;
         //hardButton.center.y = super.view.center.y * 3/4;
         // Do any additional setup after loading the view.

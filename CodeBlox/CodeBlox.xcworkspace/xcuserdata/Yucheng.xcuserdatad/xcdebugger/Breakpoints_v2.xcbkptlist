@@ -15,6 +15,38 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "9"
             endingLineNumber = "9">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CodeBlox.FirebaseServiceObject.__deallocating_deinit"
+                  moduleName = "CodeBlox"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Yucheng/Dev/iOS/codeBlox/CodeBlox/CodeBlox/FirebaseServiceObject.swift"
+                  timestampString = "483941998.464702"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CodeBlox.FirebaseServiceObject.init () -&gt; CodeBlox.FirebaseServiceObject"
+                  moduleName = "CodeBlox"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Yucheng/Dev/iOS/codeBlox/CodeBlox/CodeBlox/FirebaseServiceObject.swift"
+                  timestampString = "483941998.464866"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "31">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -86,11 +118,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CodeBlox/ViewController.swift"
-            timestampString = "481668125.289381"
+            timestampString = "483942469.04232"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
             landmarkName = "singlePlayer(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -102,11 +134,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CodeBlox/ViewController.swift"
-            timestampString = "481668129.780937"
+            timestampString = "483942469.04232"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
             landmarkName = "singlePlayer(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -166,11 +198,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CodeBlox/DifficultyViewController.swift"
-            timestampString = "482097628.917873"
+            timestampString = "483942596.694503"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
             landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
@@ -182,11 +214,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CodeBlox/DifficultyViewController.swift"
-            timestampString = "482097630.432425"
+            timestampString = "483942596.694503"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "DifficultyViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -214,11 +246,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CodeBlox/DifficultyViewController.swift"
-            timestampString = "482097652.694883"
+            timestampString = "483942596.694503"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
             landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
@@ -589,6 +621,54 @@
             endingLineNumber = "60"
             landmarkName = "ECGMatchStarted()"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CodeBlox/ViewController.swift"
+            timestampString = "483941997.298481"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CodeBlox.ViewController.viewDidLoad () -&gt; ()"
+                  moduleName = "CodeBlox"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Yucheng/Dev/iOS/codeBlox/CodeBlox/CodeBlox/ViewController.swift"
+                  timestampString = "483941998.416426"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "2631">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CodeBlox.ViewController.(viewDidLoad () -&gt; ()).(closure #1)"
+                  moduleName = "CodeBlox"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Yucheng/Dev/iOS/codeBlox/CodeBlox/CodeBlox/ViewController.swift"
+                  timestampString = "483941998.416586"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

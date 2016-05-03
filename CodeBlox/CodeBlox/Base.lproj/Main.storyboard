@@ -20,12 +20,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CodeBlox" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9p-pp-pKS">
-                                <rect key="frame" x="263.5" y="149" width="73.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.20000000000000001" green="1" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FtL-m1-aJi">
                                 <rect key="frame" x="165" y="384" width="270" height="75"/>
                                 <color key="backgroundColor" red="1" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -53,18 +47,72 @@
                                     <action selector="singlePlayer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kZg-fS-Aff"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="J7l-6D-3jZ">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="430" id="VKs-Qm-98n">
+                                        <variation key="heightClass=regular" constant="200"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="430" id="Ysa-ky-ceq"/>
+                                    <constraint firstAttribute="width" constant="240" id="kNu-Vb-N2F"/>
+                                    <constraint firstAttribute="height" constant="128" id="yB1-qP-Tgx"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="VKs-Qm-98n"/>
+                                        <exclude reference="Ysa-ky-ceq"/>
+                                        <exclude reference="kNu-Vb-N2F"/>
+                                        <exclude reference="yB1-qP-Tgx"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="VKs-Qm-98n"/>
+                                        <exclude reference="Ysa-ky-ceq"/>
+                                        <exclude reference="kNu-Vb-N2F"/>
+                                        <include reference="yB1-qP-Tgx"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="FtL-m1-aJi" firstAttribute="top" secondItem="rRU-E5-gGn" secondAttribute="bottom" constant="42" id="5aW-jQ-v5w"/>
+                            <constraint firstItem="FtL-m1-aJi" firstAttribute="top" secondItem="rRU-E5-gGn" secondAttribute="bottom" constant="42" id="5aW-jQ-v5w">
+                                <variation key="heightClass=regular" constant="30"/>
+                            </constraint>
+                            <constraint firstItem="J7l-6D-3jZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BqR-Ca-hd0"/>
                             <constraint firstItem="FtL-m1-aJi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CnY-Rc-CBP"/>
-                            <constraint firstItem="E9p-pp-pKS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UVV-hq-ZM5"/>
+                            <constraint firstItem="J7l-6D-3jZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="160" id="EWy-Ub-2Ox"/>
+                            <constraint firstItem="J7l-6D-3jZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="58" id="KxA-39-0fb">
+                                <variation key="heightClass=regular" constant="20"/>
+                            </constraint>
                             <constraint firstItem="FtL-m1-aJi" firstAttribute="height" secondItem="rRU-E5-gGn" secondAttribute="height" id="aLK-Bu-iBg"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="FtL-m1-aJi" secondAttribute="bottom" constant="141" id="cOe-Rw-B3M"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="FtL-m1-aJi" secondAttribute="bottom" constant="141" id="cOe-Rw-B3M">
+                                <variation key="heightClass=regular" constant="30"/>
+                            </constraint>
                             <constraint firstItem="FtL-m1-aJi" firstAttribute="width" secondItem="rRU-E5-gGn" secondAttribute="width" id="cdf-4y-RFp"/>
                             <constraint firstItem="rRU-E5-gGn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xU2-04-hJk"/>
-                            <constraint firstItem="E9p-pp-pKS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="85" id="ztk-0h-0X6"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="J7l-6D-3jZ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="BqR-Ca-hd0"/>
+                                <exclude reference="EWy-Ub-2Ox"/>
+                                <exclude reference="KxA-39-0fb"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="subviews">
+                                <include reference="J7l-6D-3jZ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="BqR-Ca-hd0"/>
+                                <exclude reference="EWy-Ub-2Ox"/>
+                                <include reference="KxA-39-0fb"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="heq-jq-Aio"/>
                     <connections>
@@ -75,7 +123,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="535" y="685"/>
+            <point key="canvasLocation" x="535" y="684.75"/>
         </scene>
         <!--Difficulty View Controller-->
         <scene sceneID="H0J-jF-173">
@@ -797,6 +845,9 @@
             <point key="canvasLocation" x="-184" y="685"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo" width="600" height="68"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="FT4-Mi-Nql"/>
     </inferredMetricsTieBreakers>

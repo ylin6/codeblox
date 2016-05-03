@@ -16,6 +16,23 @@ class ViewController: UIViewController {
         super.viewDidLoad();
         singlePlayerButton.layer.cornerRadius = singlePlayerButton.bounds.height/2;
         multiplayerButton.layer.cornerRadius = multiplayerButton.bounds.height/2;
+        
+        let spy = singlePlayerButton.center.y;
+        let mpy = singlePlayerButton.center.y;
+        
+        
+        singlePlayerButton.center.y = self.view.bounds.height + 500;
+        multiplayerButton.center.y = self.view.bounds.height + 1000;
+        
+        UIView.animateWithDuration(0.5, delay: 0.0, options: UIViewAnimationOptions.CurveEaseOut, animations:{
+            self.singlePlayerButton.center.y = spy;
+            self.multiplayerButton.center.y = mpy;
+            }, completion: nil);
+        
+        /*
+        UIView.animateWithDuration(0.8, delay: 0.0, options: UIViewAnimationOptions.CurveEaseOut, animations:{
+            
+            }, completion: nil);*/
 
     }
 
