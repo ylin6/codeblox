@@ -28,7 +28,7 @@ class Puzzle: NSObject {
     
     func checkSolved()->[Int]{
         var wrongArray = [Int]();
-        for(var i = 0; i < pieces.count; i++){
+        for(var i = 0; i < pieces.count; i += 1){
             //print("i: \(i) : \(pieces[i].correctIndex)");
             if(i != pieces[i].correctIndex){
                 wrongArray.append(i);
@@ -40,7 +40,7 @@ class Puzzle: NSObject {
     
     func runCode()->Bool{
         var source:String = "";
-        for(var i = 0; i < pieces.count; i++){
+        for(var i = 0; i < pieces.count; i += 1){
             source += (pieces[i].codeLine);
         }
         

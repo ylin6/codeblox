@@ -35,12 +35,7 @@ class DifficultyViewController: UIViewController {
             self.mediumButton.center.y = mby;
             self.hardButton.center.y = hby;
             }, completion: nil);
-        
 
-        
-        //easyButton.center.y = super.view.center.y/2;
-        //hardButton.center.y = super.view.center.y * 3/4;
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -71,14 +66,5 @@ class DifficultyViewController: UIViewController {
         }
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

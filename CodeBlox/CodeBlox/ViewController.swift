@@ -28,11 +28,6 @@ class ViewController: UIViewController {
             self.singlePlayerButton.center.y = spy;
             self.multiplayerButton.center.y = mpy;
             }, completion: nil);
-        
-        /*
-        UIView.animateWithDuration(0.8, delay: 0.0, options: UIViewAnimationOptions.CurveEaseOut, animations:{
-            
-            }, completion: nil);*/
 
     }
 
